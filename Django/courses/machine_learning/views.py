@@ -1,13 +1,6 @@
-from django.http import HttpResponse
+# machine_learning/views.py
 from django.shortcuts import render
-
-# Create your views here.
+from django.http import HttpResponse
 
 def machine(request):
-    return HttpResponse('Welcome to the FIGHT CLUB')
-
-def deep_learning(request):
-    return HttpResponse('Welcome to Deep Learning')
-
-def About_Us(request):
-    return HttpResponse('We are open to be Acknowledged')
+    return render(request, 'machine_learning.html')
