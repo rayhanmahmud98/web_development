@@ -3,7 +3,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def machine(request):
-    return render(request, 'machine_learning/machine_learning.html')
+    
+    names = {'names' : ['Rayhan', 'Mahmud', 'IIUC', 'CUET']}
+    
+    course = 'Data science'
+    total_class = 10
+    seat = 45
+    course_duration = 10
+    offering = {'course' : course , 'tc' : total_class , 'seat' : seat , 'cd' : course_duration }
+    return render(request, 'machine_learning/machine_learning.html',context=names)
 
 def random(request):
     return render(request, 'machine_learning/random_forest.html')
