@@ -1,6 +1,7 @@
+# about_us/views.py
 from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
 def about_us(request):
-    return HttpResponse('lets inform u about US !!!')
+    # Include the "about/" subdirectory
+    return render(request, 'about/about_us.html')
