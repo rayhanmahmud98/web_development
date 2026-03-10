@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Machine Learning</title>
-</head>
-<body>
-    <h1>We are offering {{tc}} free and paid {{course|capfirst}} course !!</h1>
-    <h1>This course has {{seat}} seats for {{cd}} days !!!</h1>
+{% extends "common_code/base.html" %}
 
-    {% if tc %}
-    <h1> The code if fine!!!</h1>
-    {% endif %}
+{% block title %} ML {% endblock title %}
 
-    {% for n in names %}
-    {{n}}
-    {% endfor %}
-</body>
-</html>
+{% block alert %} This is about Machine Learning !!!! {% endblock alert %}
