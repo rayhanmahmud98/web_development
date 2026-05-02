@@ -14,17 +14,17 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/about/abs/">About</a>
+    <a class="navbar-brand" href="{% url 'about' %}">About</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/blogs/">Blog</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'blog' %}">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/da/das">Data Analysis</a>
+          <a class="nav-link" href="{% url 'data' %}">Data Analysis</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/dl/dl">Deep Learning</a>
@@ -34,9 +34,9 @@
             Machine Learning
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">DT</a></li>
-            <li><a class="dropdown-item" href="#">KNN</a></li>
-            <li><a class="dropdown-item" href="#">Random Forest<a></li>
+            <li><a class="dropdown-item" href="/ml/dt/">DT</a></li>
+            <li><a class="dropdown-item" href="/ml/knn/">KNN</a></li>
+            <li><a class="dropdown-item" href="/ml/random/">Random Forest<a></li>
           </ul>
         </li>
       </ul>
@@ -96,9 +96,7 @@
   </div>
 </form>
 
-{% comment %} carousel slide {% endcomment %}
-
-<div id="carouselExample" class="carousel slide">
+{% comment %} <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{% static 'images/2.jpg' %}" class="d-block w-100" alt="LOGO">
@@ -118,7 +116,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div> {% endcomment %}
 
 <div class="alert alert-success" role="alert">
   {% block alert %} {% endblock alert %}
