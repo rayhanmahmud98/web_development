@@ -5,5 +5,5 @@ from django.db import models
 class Teachers(models.Model):
     tid = models.IntegerField()
     tname = models.CharField(max_length=40)
-    temail = models.EmailField(30)
+    temail = models.EmailField(max_length=30)
     
