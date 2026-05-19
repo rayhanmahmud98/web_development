@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.blog1, name='blog'),
+    path('f/',views.ShowFormsData,name='form'),
 ]
